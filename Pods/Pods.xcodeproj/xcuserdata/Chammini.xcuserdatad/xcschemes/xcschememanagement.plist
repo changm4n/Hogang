@@ -19,7 +19,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Shimmer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>WSProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,12 +37,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6AE69954D0A373A6AE36516590BBAAC5</key>
+		<key>21DEECB342F97F3A51857EFC851E906D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>795801DEC1EA88FE97E55B606FCD10FA</key>
+		<key>4358ACEEC6370B45F6CDC82EDD8F3736</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>586302796594E154B71CB5C7A323A3E0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -43,6 +58,11 @@
 			<true/>
 		</dict>
 		<key>7B316FBECF845695A5C8D0669F8373E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF9529DB3EA2E90E387F0DBF698350AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-
+import WSProgressHUD
 
 class DetailViewController: UIViewController {
 
@@ -17,7 +17,7 @@ class DetailViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      self.navigationController?.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -41,7 +41,7 @@ extension DetailViewController:UITableViewDataSource{
     guard news != nil else{ return cell}
     
     
-    cell.titleLabel.text = news!["title"].stringValue
+    cell.titleLabel.text = "뉴스 출처"//news!["title"].stringValue
     cell.contentLabel.text = news!["description"].stringValue
     
     return cell
@@ -49,4 +49,16 @@ extension DetailViewController:UITableViewDataSource{
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return newsArray?.count ?? 0
   }
+}
+
+
+extension DetailViewController:UINavigationControllerDelegate{
+  
+  func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool){
+    WSProgressHUD.dismiss()
+  }
+  
+  
+  
+  
 }
