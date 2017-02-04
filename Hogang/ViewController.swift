@@ -12,10 +12,12 @@ import SwiftyJSON
 class ViewController: UIViewController {
   
   @IBOutlet var searchField: shakebleTextField!
+  @IBOutlet var searchBarView: shadowContentView!
   
   var newsArray:[JSON]?
   override func viewDidLoad() {
     super.viewDidLoad()
+    searchField.text = "삼성"
     // Do any additional setup after loading the view, typically from a nib.
   }
   
@@ -36,7 +38,7 @@ class ViewController: UIViewController {
       searchField.resignFirstResponder()
       
     }else{
-      searchField.shake()
+      searchBarView.shake()
       return
     }
     
@@ -55,23 +57,39 @@ class ViewController: UIViewController {
   
   func loadNews(_ title:String){
     
-    let headers = ["X-Naver-Client-Id":"a3Q0z3cy7NcyYRAq6qAB",
-                   "X-Naver-Client-Secret":"bh8ibSAxJt",
-                   "Content-Type":"application/x-www-form-urlencoded; charset=utf-8"]
-    
-    let urlRaw = "https://openapi.naver.com/v1/search/news.json?query=\(title)&display=10&start=1&sort=sim"
+        let headers = ["Content-Type":"application/x-www-form-urlencoded; charset=utf-8"]
+    //
+    //    let urlRaw = "https://railsapi2-sghiroo.c9users.io/pokemons/\(title).json"
+    //    let urlStr = urlRaw.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    //    let url = URL(string: urlStr)!
+    //    Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
+    //      print(response.result.description)
+    //      if let json = response.result.value {
+    //        let data = JSON(json)
+    //        self.newsArray =  data.arrayValue
+    //        self.performSegue(withIdentifier: "push", sender: self)
+    //      }
+    //
+    //    }
+//    let urlRaw = "https://railsapi2-sghiroo.c9users.io/pokemons/\(title).json"
+    let urlRaw = "https://railsapi2-sghiroo.c9users.io/pokemons?tl=삼성.json"
     let urlStr = urlRaw.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     let url = URL(string: urlStr)!
+    
+    //    Alamofire.request("https://railsapi2-sghiroo.c9users.io/pokemons/\(title).json").responseJSON { (response) in
+    //      print(response.result.description)
+    //    }
+    
     Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
-      print(response.result.description)
-      if let json = response.result.value {
-        
-        let data = JSON(json)
-        self.newsArray =  data["items"].arrayValue
+      let str = String(data: response.data!, encoding: .utf8)
+      if let json = response.data{
+        let data = JSON(data: json)
+        self.newsArray =  data.arrayValue
         self.performSegue(withIdentifier: "push", sender: self)
       }
       
     }
+    
   }
 }
 

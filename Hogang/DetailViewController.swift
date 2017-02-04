@@ -35,21 +35,14 @@ extension DetailViewController:UITableViewDataSource{
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath) as! NewsCell
     
     let news = newsArray?[indexPath.row]
     guard news != nil else{ return cell}
     
-    //    var attrStr = try! NSAttributedString(
-    //      data: "<b><i>text</i></b>".dataUsingEncoding(NSUnicodeStringEncoding, allowLossyConversion: true)!,
-    //      options: [ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
-    //      documentAttributes: nil)
     
-    
-    let title = try? NSAttributedString(data: news!["title"].stringValue.data(using: .unicode)!, options: [NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType], documentAttributes: nil)
-    let detail = try? NSAttributedString(data: news!["description"].stringValue.data(using: .unicode)!, options: [NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType], documentAttributes: nil)
-    cell.textLabel?.attributedText = title
-    cell.detailTextLabel?.attributedText = detail
+    cell.titleLabel.text = news!["title"].stringValue
+    cell.contentLabel.text = news!["description"].stringValue
     
     return cell
   }

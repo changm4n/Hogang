@@ -65,6 +65,16 @@ class shakebleTextField:UITextField,Shakeble{
   
   override func draw(_ rect: CGRect) {
     super.draw(rect)
+    
+  }
+  
+}
+
+
+class shadowContentView:UIView,Shakeble{
+  
+  override func draw(_ rect: CGRect) {
+    super.draw(rect)
     let path = UIBezierPath(rect: rect)
     self.clipsToBounds = false
     layer.shadowRadius = 10
@@ -74,7 +84,5 @@ class shakebleTextField:UITextField,Shakeble{
     layer.shadowOpacity = 0.5
     
     
-    
   }
-  
 }
