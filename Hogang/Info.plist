@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>호갱끼데스까</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -27,6 +29,13 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>SCAN</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NanumBarunGothic.ttf</string>
+		<string>NanumBarunGothicBold.ttf</string>
+		<string>NanumBarunGothicLight.ttf</string>
+		<string>NanumBarunUltraLightGothic.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -45,12 +54,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>NanumBarunGothic.ttf</string>
-		<string>NanumBarunGothicBold.ttf</string>
-		<string>NanumBarunGothicLight.ttf</string>
-		<string>NanumBarunUltraLightGothic.ttf</string>
-	</array>
 </dict>
 </plist>

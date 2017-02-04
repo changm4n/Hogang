@@ -14,12 +14,34 @@ class ViewController: UIViewController {
   
   @IBOutlet var searchField: shakebleTextField!
   @IBOutlet var searchBarView: shadowContentView!
+  @IBOutlet var scanButton: UIButton!
+  @IBOutlet var searchButton: UIButton!
   
+  @IBOutlet var contentBox: UIView!
   var newsArray:[JSON]?
+  
+  @IBOutlet var topBoxHeight: NSLayoutConstraint!
+  
+  var keyword:String?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    setTitleWithLogo()
+    
+    searchField.alpha = 0.0
+    contentBox.alpha = 0.0
+    scanButton.alpha = 0.0
+    searchButton.alpha = 0.0
+    UIView.animate(withDuration: 0.3) {
+      
+      self.searchField.alpha = 1.0
+      self.contentBox.alpha = 1.0
+      self.scanButton.alpha = 1.0
+      self.searchButton.alpha = 1.0
+      
+    }
+    
+    setTitleWithLogo(true)
   }
   
   override func didReceiveMemoryWarning() {
@@ -36,6 +58,7 @@ class ViewController: UIViewController {
     
     if let text = searchField.text, searchField.text?.isEmpty != true{
       WSProgressHUD.show(withStatus: "정보 불러오는 중..")
+      keyword = text
       loadNews(text)
       searchField.resignFirstResponder()
       
@@ -52,6 +75,17 @@ class ViewController: UIViewController {
     if segue.identifier == "push"{
       let vc = segue.destination as! DetailViewController
       vc.newsArray = newsArray
+      vc.keyword = keyword!
+    }else {
+      let vc = segue.destination as! ScanViewController
+      vc.didScanHandler = {(message) in
+        self.searchField.text = message
+        self.keyword = message
+        WSProgressHUD.show(withStatus: "정보 불러오는 중..")
+        self.loadNews(message)
+        
+      }
+      
     }
   }
   
@@ -59,9 +93,9 @@ class ViewController: UIViewController {
   
   func loadNews(_ title:String){
     
-        let headers = ["Content-Type":"application/x-www-form-urlencoded; charset=utf-8"]
+    let headers = ["Content-Type":"application/x-www-form-urlencoded; charset=utf-8"]
     
-    let urlRaw = "https://railsapi2-sghiroo.c9users.io/pokemons?tl=\(title).json"
+    let urlRaw = "https://hogang-api-sghiroo.c9users.io/news/\(title).json"
     let urlStr = urlRaw.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     let url = URL(string: urlStr)!
     
@@ -91,7 +125,7 @@ extension ViewController:UITextFieldDelegate{
 extension ViewController:UITableViewDataSource{
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 5
+    return 3
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -110,6 +144,13 @@ extension ViewController:UITableViewDataSource{
     
     return cell
   }
+  
+}
+
+extension ViewController{
+  
+  
+  
   
 }
 

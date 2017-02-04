@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MTBBarcodeScanner.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,21 +42,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>21DEECB342F97F3A51857EFC851E906D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4358ACEEC6370B45F6CDC82EDD8F3736</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>586302796594E154B71CB5C7A323A3E0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
@@ -62,7 +52,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BF9529DB3EA2E90E387F0DBF698350AB</key>
+		<key>921DA2F558A431787A99743B3CB48C43</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA76166D741F96ACE61415E55479A1F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDAF27BE15DBEE3F66D84079233BDDFA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D15B2E7C545F94CABD70F93FDF723ECA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2EEF494A86B8F1F1CA7548FF54DB8F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

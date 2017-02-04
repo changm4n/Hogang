@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.0.0)
+  - Kingfisher (3.0.1)
   - MTBBarcodeScanner (2.1.0)
   - Shimmer (1.0.2)
   - SwiftyJSON (3.0.0)
@@ -8,6 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - Kingfisher (~> 3.0)
   - MTBBarcodeScanner
   - SwiftyJSON (from `https://github.com/appsailor/SwiftyJSON.git`, branch `swift3`)
   - WSProgressHUD
@@ -24,11 +26,12 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  Kingfisher: d5a491b45ea453d90a31bd2c0831d5243e73a73f
   MTBBarcodeScanner: 72b7e81aa5ad9be2d40c1af3f2996083dce9d58f
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
   WSProgressHUD: 0ebb8dd846f7fb4715d42c87584456480cb7fbf0
 
-PODFILE CHECKSUM: a418bfd0a27fd90595485ccbac6fabac15af204a
+PODFILE CHECKSUM: 41ffa40d72ea30bda262b81c6bc39e013f276eec
 
 COCOAPODS: 1.1.0.rc.3

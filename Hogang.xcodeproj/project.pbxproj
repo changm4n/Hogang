@@ -22,6 +22,9 @@
 		375FB8451E45E12100AF9E78 /* NanumBarunGothicBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 375FB83F1E45CBF300AF9E78 /* NanumBarunGothicBold.ttf */; };
 		375FB8461E45E12100AF9E78 /* NanumBarunGothicLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 375FB8401E45CBF300AF9E78 /* NanumBarunGothicLight.ttf */; };
 		375FB8471E45E12100AF9E78 /* NanumBarunGothicUltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 375FB8411E45CBF300AF9E78 /* NanumBarunGothicUltraLight.ttf */; };
+		379354691E4607C10025F996 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379354681E4607C10025F996 /* SplashViewController.swift */; };
+		3793546B1E4659DC0025F996 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793546A1E4659DC0025F996 /* CommunityViewController.swift */; };
+		3793546D1E4669320025F996 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793546C1E4669320025F996 /* WebViewController.swift */; };
 		D3B0A9E79014788D8F4D4C19 /* Pods_Hogang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3E43A78F9082BCFF22C66B /* Pods_Hogang.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		375FB8401E45CBF300AF9E78 /* NanumBarunGothicLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunGothicLight.ttf; sourceTree = "<group>"; };
 		375FB8411E45CBF300AF9E78 /* NanumBarunGothicUltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunGothicUltraLight.ttf; sourceTree = "<group>"; };
 		375FB8421E45D26C00AF9E78 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		379354681E4607C10025F996 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3793546A1E4659DC0025F996 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		3793546C1E4669320025F996 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		6196F0673AE47AB9800C8D05 /* Pods-Hogang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hogang.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hogang/Pods-Hogang.release.xcconfig"; sourceTree = "<group>"; };
 		AD3E43A78F9082BCFF22C66B /* Pods_Hogang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hogang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2348EF94A7F82BA8F3498DE /* Pods-Hogang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hogang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hogang/Pods-Hogang.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				375FB83A1E45BBC700AF9E78 /* Extensions.swift */,
+				379354681E4607C10025F996 /* SplashViewController.swift */,
 				371FE4061E45B6C0009C1C08 /* AppDelegate.swift */,
 				371FE4081E45B6C0009C1C08 /* ViewController.swift */,
 				375FB8421E45D26C00AF9E78 /* NewsCell.swift */,
@@ -92,6 +99,8 @@
 				371FE4121E45B6C0009C1C08 /* Info.plist */,
 				375FB8341E45B8D700AF9E78 /* ScanViewController.swift */,
 				375FB8361E45B8DD00AF9E78 /* DetailViewController.swift */,
+				3793546A1E4659DC0025F996 /* CommunityViewController.swift */,
+				3793546C1E4669320025F996 /* WebViewController.swift */,
 				375FB83C1E45BF3400AF9E78 /* list.json */,
 				375FB83E1E45CBF300AF9E78 /* NanumBarunGothic.ttf */,
 				375FB83F1E45CBF300AF9E78 /* NanumBarunGothicBold.ttf */,
@@ -249,6 +258,9 @@
 			files = (
 				371FE4091E45B6C0009C1C08 /* ViewController.swift in Sources */,
 				375FB83B1E45BBC700AF9E78 /* Extensions.swift in Sources */,
+				3793546B1E4659DC0025F996 /* CommunityViewController.swift in Sources */,
+				3793546D1E4669320025F996 /* WebViewController.swift in Sources */,
+				379354691E4607C10025F996 /* SplashViewController.swift in Sources */,
 				371FE4071E45B6C0009C1C08 /* AppDelegate.swift in Sources */,
 				375FB8431E45D26C00AF9E78 /* NewsCell.swift in Sources */,
 				375FB8391E45BBB400AF9E78 /* MNFunction.swift in Sources */,

@@ -159,7 +159,7 @@ class underLineLabel:UILabel{
 extension UIViewController{
   
   
-  func setTitleWithLogo(){
+  func setTitleWithLogo(_ animated:Bool){
     
     let imageView = UIImageView(frame:CGRect(x: 0, y: 0, width: 200, height: 25))
     let logo = UIImage(named: "logo")
@@ -167,6 +167,12 @@ extension UIViewController{
     imageView.contentMode = UIViewContentMode.scaleAspectFit
     
     self.navigationItem.titleView = imageView
+    if animated == true{
+      self.navigationItem.titleView?.alpha = 0.0
+      UIView.animate(withDuration: 0.4) {
+        self.navigationItem.titleView?.alpha = 1.0
+      }
+    }
     
   }
 }

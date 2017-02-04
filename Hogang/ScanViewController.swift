@@ -11,14 +11,14 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import MTBBarcodeScanner
-
+import WSProgressHUD
 
 class ScanViewController: UIViewController {
   
   
   @IBOutlet var previewView: UIView!
   
-  
+  var didScanHandler: ((String) -> Void)?
   var jsonData:JSON?
   var scanner: MTBBarcodeScanner?
   
@@ -71,46 +71,41 @@ class ScanViewController: UIViewController {
       var message = ""
       if companyName.isEmpty != true {
         message = companyName
-        showAlertWithString("SCAN 성공", message: message, sender: self, handler: { action in
-          self.loadNews(message)
+        self.scanner?.stopScanning()
+        self.dismiss(animated: true, completion: {
+          self.didScanHandler?(message)
         })
       }else{
         message = "정보조회불가-\(serial)"
-        showAlertWithString("SCAN 성공", message: message, sender: self, handler: { action in
-          return
-        })
+        WSProgressHUD.showSuccess(withStatus: "조회 불가")
       }
-      
-      
-      
-      
-      
-      //
       
     })
     
   }
   func loadNews(_ title:String){
     
-    let headers = ["X-Naver-Client-Id":"a3Q0z3cy7NcyYRAq6qAB",
-                   "X-Naver-Client-Secret":"bh8ibSAxJt",
-                   "Content-Type":"application/x-www-form-urlencoded; charset=utf-8"]
+    let headers = ["Content-Type":"application/x-www-form-urlencoded; charset=utf-8"]
     
-    let urlRaw = "https://openapi.naver.com/v1/search/news.json?query=\(title)&display=10&start=1&sort=sim"
+    let urlRaw = "https://railsapi2-sghiroo.c9users.io/pokemons?tl=\(title).json"
     let urlStr = urlRaw.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     let url = URL(string: urlStr)!
+    
     Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
       print(response.result.description)
-      if let json = response.result.value {
-        
-        let data = JSON(json)
-        self.newsArray = data["items"].arrayValue
+      if let json = response.data{
+        let data = JSON(data: json)
+        self.newsArray =  data.arrayValue
         self.performSegue(withIdentifier: "push", sender: self)
       }
       
     }
   }
   
+  @IBAction func cancelButttonAction(_ sender: AnyObject) {
+    
+    self.dismiss(animated: true, completion: nil)
+  }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let vc = segue.destination as! DetailViewController
