@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		371FE4071E45B6C0009C1C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FE4061E45B6C0009C1C08 /* AppDelegate.swift */; };
+		371FE4091E45B6C0009C1C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FE4081E45B6C0009C1C08 /* ViewController.swift */; };
+		371FE40C1E45B6C0009C1C08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371FE40A1E45B6C0009C1C08 /* Main.storyboard */; };
+		371FE40E1E45B6C0009C1C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371FE40D1E45B6C0009C1C08 /* Assets.xcassets */; };
+		371FE4111E45B6C0009C1C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371FE40F1E45B6C0009C1C08 /* LaunchScreen.storyboard */; };
+		375FB8351E45B8D700AF9E78 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375FB8341E45B8D700AF9E78 /* ScanViewController.swift */; };
+		375FB8371E45B8DD00AF9E78 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375FB8361E45B8DD00AF9E78 /* DetailViewController.swift */; };
+		375FB8391E45BBB400AF9E78 /* MNFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375FB8381E45BBB400AF9E78 /* MNFunction.swift */; };
+		375FB83B1E45BBC700AF9E78 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375FB83A1E45BBC700AF9E78 /* Extensions.swift */; };
+		375FB83D1E45BF3400AF9E78 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = 375FB83C1E45BF3400AF9E78 /* list.json */; };
+		D3B0A9E79014788D8F4D4C19 /* Pods_Hogang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3E43A78F9082BCFF22C66B /* Pods_Hogang.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		371FE4031E45B6C0009C1C08 /* Hogang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hogang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		371FE4061E45B6C0009C1C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		371FE4081E45B6C0009C1C08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		371FE40B1E45B6C0009C1C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		371FE40D1E45B6C0009C1C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		371FE4101E45B6C0009C1C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		371FE4121E45B6C0009C1C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		375FB8341E45B8D700AF9E78 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		375FB8361E45B8DD00AF9E78 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		375FB8381E45BBB400AF9E78 /* MNFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNFunction.swift; sourceTree = "<group>"; };
+		375FB83A1E45BBC700AF9E78 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		375FB83C1E45BF3400AF9E78 /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
+		6196F0673AE47AB9800C8D05 /* Pods-Hogang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hogang.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hogang/Pods-Hogang.release.xcconfig"; sourceTree = "<group>"; };
+		AD3E43A78F9082BCFF22C66B /* Pods_Hogang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hogang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2348EF94A7F82BA8F3498DE /* Pods-Hogang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hogang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hogang/Pods-Hogang.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		371FE4001E45B6C0009C1C08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3B0A9E79014788D8F4D4C19 /* Pods_Hogang.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		371FE3FA1E45B6C0009C1C08 = {
+			isa = PBXGroup;
+			children = (
+				371FE4051E45B6C0009C1C08 /* Hogang */,
+				371FE4041E45B6C0009C1C08 /* Products */,
+				6954C52E76301B279CCE8CA0 /* Pods */,
+				6803283C544C05BFC5F49466 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		371FE4041E45B6C0009C1C08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				371FE4031E45B6C0009C1C08 /* Hogang.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		371FE4051E45B6C0009C1C08 /* Hogang */ = {
+			isa = PBXGroup;
+			children = (
+				375FB83A1E45BBC700AF9E78 /* Extensions.swift */,
+				371FE4061E45B6C0009C1C08 /* AppDelegate.swift */,
+				371FE4081E45B6C0009C1C08 /* ViewController.swift */,
+				371FE40A1E45B6C0009C1C08 /* Main.storyboard */,
+				375FB8381E45BBB400AF9E78 /* MNFunction.swift */,
+				371FE40D1E45B6C0009C1C08 /* Assets.xcassets */,
+				371FE40F1E45B6C0009C1C08 /* LaunchScreen.storyboard */,
+				371FE4121E45B6C0009C1C08 /* Info.plist */,
+				375FB8341E45B8D700AF9E78 /* ScanViewController.swift */,
+				375FB8361E45B8DD00AF9E78 /* DetailViewController.swift */,
+				375FB83C1E45BF3400AF9E78 /* list.json */,
+			);
+			path = Hogang;
+			sourceTree = "<group>";
+		};
+		6803283C544C05BFC5F49466 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD3E43A78F9082BCFF22C66B /* Pods_Hogang.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6954C52E76301B279CCE8CA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2348EF94A7F82BA8F3498DE /* Pods-Hogang.debug.xcconfig */,
+				6196F0673AE47AB9800C8D05 /* Pods-Hogang.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		371FE4021E45B6C0009C1C08 /* Hogang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 371FE4151E45B6C0009C1C08 /* Build configuration list for PBXNativeTarget "Hogang" */;
+			buildPhases = (
+				9559DDF38E41F3148186FA52 /* [CP] Check Pods Manifest.lock */,
+				371FE3FF1E45B6C0009C1C08 /* Sources */,
+				371FE4001E45B6C0009C1C08 /* Frameworks */,
+				371FE4011E45B6C0009C1C08 /* Resources */,
+				7B6B7E27812446F17034DB68 /* [CP] Embed Pods Frameworks */,
+				97064C69FF0DC1113BA5BCFE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hogang;
+			productName = Hogang;
+			productReference = 371FE4031E45B6C0009C1C08 /* Hogang.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		371FE3FB1E45B6C0009C1C08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = unithon;
+				TargetAttributes = {
+					371FE4021E45B6C0009C1C08 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 47RZ4GF77T;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 371FE3FE1E45B6C0009C1C08 /* Build configuration list for PBXProject "Hogang" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 371FE3FA1E45B6C0009C1C08;
+			productRefGroup = 371FE4041E45B6C0009C1C08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				371FE4021E45B6C0009C1C08 /* Hogang */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		371FE4011E45B6C0009C1C08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371FE4111E45B6C0009C1C08 /* LaunchScreen.storyboard in Resources */,
+				375FB83D1E45BF3400AF9E78 /* list.json in Resources */,
+				371FE40E1E45B6C0009C1C08 /* Assets.xcassets in Resources */,
+				371FE40C1E45B6C0009C1C08 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B6B7E27812446F17034DB68 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hogang/Pods-Hogang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9559DDF38E41F3148186FA52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97064C69FF0DC1113BA5BCFE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hogang/Pods-Hogang-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		371FE3FF1E45B6C0009C1C08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371FE4091E45B6C0009C1C08 /* ViewController.swift in Sources */,
+				375FB83B1E45BBC700AF9E78 /* Extensions.swift in Sources */,
+				371FE4071E45B6C0009C1C08 /* AppDelegate.swift in Sources */,
+				375FB8391E45BBB400AF9E78 /* MNFunction.swift in Sources */,
+				375FB8351E45B8D700AF9E78 /* ScanViewController.swift in Sources */,
+				375FB8371E45B8DD00AF9E78 /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		371FE40A1E45B6C0009C1C08 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				371FE40B1E45B6C0009C1C08 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		371FE40F1E45B6C0009C1C08 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				371FE4101E45B6C0009C1C08 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		371FE4131E45B6C0009C1C08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		371FE4141E45B6C0009C1C08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		371FE4161E45B6C0009C1C08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2348EF94A7F82BA8F3498DE /* Pods-Hogang.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 47RZ4GF77T;
+				INFOPLIST_FILE = Hogang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = unithon.Hogang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		371FE4171E45B6C0009C1C08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6196F0673AE47AB9800C8D05 /* Pods-Hogang.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 47RZ4GF77T;
+				INFOPLIST_FILE = Hogang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = unithon.Hogang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		371FE3FE1E45B6C0009C1C08 /* Build configuration list for PBXProject "Hogang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				371FE4131E45B6C0009C1C08 /* Debug */,
+				371FE4141E45B6C0009C1C08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		371FE4151E45B6C0009C1C08 /* Build configuration list for PBXNativeTarget "Hogang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				371FE4161E45B6C0009C1C08 /* Debug */,
+				371FE4171E45B6C0009C1C08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 371FE3FB1E45B6C0009C1C08 /* Project object */;
+}

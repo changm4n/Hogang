@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.0.0)
+  - MTBBarcodeScanner (2.1.0)
+  - SwiftyJSON (3.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - MTBBarcodeScanner
+  - SwiftyJSON (from `https://github.com/appsailor/SwiftyJSON.git`, branch `swift3`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :branch: swift3
+    :git: https://github.com/appsailor/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: de73429b38b8994f614fb27c5ec094bb8a4833f2
+    :git: https://github.com/appsailor/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  MTBBarcodeScanner: 72b7e81aa5ad9be2d40c1af3f2996083dce9d58f
+  SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
+
+PODFILE CHECKSUM: 825bdc5c06694a907b549252fa1ff8080dd1a8ab
+
+COCOAPODS: 1.1.0.rc.3
