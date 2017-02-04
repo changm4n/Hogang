@@ -33,8 +33,18 @@ class DetailViewController: UIViewController,UIViewControllerTransitioningDelega
     self.navigationController?.delegate = self
     shown = [Bool](repeating:false, count: newsArray!.count)
     setTitleWithLogo(false)
+    
+    let tap3 = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+    view.addGestureRecognizer(tap3)
+    
+    
   }
   
+  func dismissKeyboard() {
+    
+    view.endEditing(true)
+  }
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.

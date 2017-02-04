@@ -24,6 +24,13 @@ class ViewController: UIViewController {
   
   var keyword:String?
   
+  
+  @IBOutlet var imageView1: UIImageView!
+  @IBOutlet var imageView2: UIImageView!
+  @IBOutlet var imageView3: UIImageView!
+  
+  var recentArray:[JSON]?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -42,11 +49,68 @@ class ViewController: UIViewController {
     }
     
     setTitleWithLogo(true)
+    loadRecent()
+    
+    let tap = UITapGestureRecognizer(target: self, action: #selector(tapRecent))
+    let tap1 = UITapGestureRecognizer(target: self, action: #selector(tapRecent))
+    let tap2 = UITapGestureRecognizer(target: self, action: #selector(tapRecent))
+    
+    imageView1.addGestureRecognizer(tap)
+    imageView2.addGestureRecognizer(tap1)
+    imageView3.addGestureRecognizer(tap2)
+    
+    let tap3 = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+    view.addGestureRecognizer(tap3)
+
+    
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  func dismissKeyboard() {
+    
+    view.endEditing(true)
+  }
+  
+  func tapRecent(){
+    guard recentArray != nil else{ return}
+    performSegue(withIdentifier: "recent", sender: self)
+    
+  }
+  
+  func loadRecent(){
+    
+    
+    let headers = ["Content-Type":"application/x-www-form-urlencoded; charset=utf-8"]
+    
+    let urlRaw = "https://hogang-api-sghiroo.c9users.io/news.json"
+    let urlStr = urlRaw.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    let url = URL(string: urlStr)!
+    
+    Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
+      print(response.result.description)
+      if let json = response.data{
+        let data = JSON(data: json)
+        self.recentArray =  data.arrayValue
+        
+        
+        self.setImageViews()
+      }
+      
+    }
+    
+    
+  }
+  
+  func setImageViews(){
+    
+    let news1 = recentArray?[0]
+    let news2 = recentArray?[1]
+    let news3 = recentArray?[2]
+    
+    guard news1 != nil,news2 != nil,news3 != nil else{ return }
+    print(news1!["link"].stringValue)
+    imageView1.kf_setImage(with: URL(string: news1!["imgurl"].stringValue)!)
+    imageView2.kf_setImage(with: URL(string: news2!["imgurl"].stringValue)!)
+    imageView3.kf_setImage(with: URL(string: news3!["imgurl"].stringValue)!)
   }
   
   @IBAction func scanButtonPressed(_ sender: AnyObject) {
@@ -76,7 +140,7 @@ class ViewController: UIViewController {
       let vc = segue.destination as! DetailViewController
       vc.newsArray = newsArray
       vc.keyword = keyword!
-    }else {
+    }else if segue.identifier == "scan" {
       let vc = segue.destination as! ScanViewController
       vc.didScanHandler = {(message) in
         self.searchField.text = message
@@ -86,6 +150,9 @@ class ViewController: UIViewController {
         
       }
       
+    }else{
+      let vc = segue.destination as! RecentViewController
+      vc.newsArray = self.recentArray
     }
   }
   
@@ -122,7 +189,7 @@ extension ViewController:UITextFieldDelegate{
   }
 }
 
-extension ViewController:UITableViewDataSource{
+extension ViewController:UITableViewDataSource,UITableViewDelegate{
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 3
@@ -143,6 +210,11 @@ extension ViewController:UITableViewDataSource{
     }
     
     return cell
+  }
+  
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "community", sender: self)
   }
   
 }

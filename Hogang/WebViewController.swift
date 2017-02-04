@@ -14,7 +14,7 @@ class WebViewController: UIViewController {
   var urlString:String?
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    self.setTitleWithLogo(false)
     if urlString != nil{
       let requestObj = URLRequest(url: URL(string: urlString!)!)
       webView.loadRequest(requestObj);
