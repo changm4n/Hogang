@@ -209,6 +209,7 @@
                         <outlet property="searchButton" destination="x2W-Dt-k2A" id="b1z-1I-znl"/>
                         <outlet property="searchField" destination="cEg-c0-m4s" id="ewm-7i-g8x"/>
                         <outlet property="topBoxHeight" destination="yzn-OG-ni2" id="BfU-bG-Xaq"/>
+                        <outlet property="topView" destination="Tqn-nW-RK4" id="9Df-Mm-UlG"/>
                         <segue destination="Hba-TZ-I1a" kind="show" identifier="push" id="uGl-lY-E2X"/>
                         <segue destination="D5R-fv-ZCZ" kind="show" identifier="community" id="DQM-vH-1qO"/>
                         <segue destination="FDQ-fX-ZxY" kind="presentation" identifier="scan" id="hqn-CY-SEx"/>
@@ -708,7 +709,7 @@
         <image name="splashLogo" width="156" height="314"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z62-zb-fwX"/>
-        <segue reference="945-xG-Q8B"/>
+        <segue reference="hqn-CY-SEx"/>
+        <segue reference="o6y-UD-y9L"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -104,15 +104,13 @@ class shadowContentView:UIView,Shakeble{
   
   override func draw(_ rect: CGRect) {
     super.draw(rect)
-    //    let path = UIBezierPath(rect: rect)
+    
     self.clipsToBounds = false
     layer.masksToBounds = false
     layer.shadowRadius = 7
     layer.shadowOffset = CGSize(width: 0, height: 0)
     layer.shadowColor = UIColor.black.cgColor
-    //    layer.shadowPath = path.cgPath
     layer.shadowOpacity = 1
-    
     
   }
 }

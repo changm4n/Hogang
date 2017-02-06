@@ -17,6 +17,7 @@ class ViewController: UIViewController {
   @IBOutlet var scanButton: UIButton!
   @IBOutlet var searchButton: UIButton!
   
+  @IBOutlet var topView: UIView!
   @IBOutlet var contentBox: UIView!
   var newsArray:[JSON]?
   
@@ -60,7 +61,7 @@ class ViewController: UIViewController {
     imageView3.addGestureRecognizer(tap2)
     
     let tap3 = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-    view.addGestureRecognizer(tap3)
+    topView.addGestureRecognizer(tap3)
 
     
   }
@@ -102,6 +103,7 @@ class ViewController: UIViewController {
   
   func setImageViews(){
     
+    guard recentArray != nil else{return}
     let news1 = recentArray?[0]
     let news2 = recentArray?[1]
     let news3 = recentArray?[2]
@@ -150,9 +152,11 @@ class ViewController: UIViewController {
         
       }
       
-    }else{
+    }else if segue.identifier == "recent"{
       let vc = segue.destination as! RecentViewController
       vc.newsArray = self.recentArray
+    }else{
+      
     }
   }
   

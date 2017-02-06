@@ -20,7 +20,7 @@ class SplashViewController: UIViewController {
     
     super.viewDidLoad()
     
-    UIView.animate(withDuration: 0.8, animations: {
+    UIView.animate(withDuration: 0.9, animations: {
       let origin = self.backImage.frame
       self.backImage.frame = CGRect(x: 0, y: 64, width: origin.width, height: 250)
       self.logoImage.frame = CGRect(x: 67, y: 102, width: 240, height: 121)

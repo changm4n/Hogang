@@ -34,8 +34,8 @@ class DetailViewController: UIViewController,UIViewControllerTransitioningDelega
     shown = [Bool](repeating:false, count: newsArray!.count)
     setTitleWithLogo(false)
     
-    let tap3 = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-    view.addGestureRecognizer(tap3)
+//    let tap3 = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+//    view.addGestureRecognizer(tap3)
     
     
   }
